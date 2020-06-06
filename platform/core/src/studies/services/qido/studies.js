@@ -79,7 +79,7 @@ export default function Studies(server, filter) {
   const studies = [];
 
   studies.push({
-    StudyInstanceUID: "1.2.840.113619.2.5.1762583153.215519.978957063.78",
+    StudyInstanceUID: "1.2.392.200036.9142.10002202.1020000000.1.20190809092253.585",
     StudyDate: "20200108",
     StudyTime: "120022",
     AccessionNumber: "001",
