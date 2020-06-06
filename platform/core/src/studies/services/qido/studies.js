@@ -92,6 +92,9 @@ export default function Studies(server, filter) {
     numberOfStudyRelatedInstances: 1,
     StudyDescription: 1,
     modalities: "CR",
+    bodypart: "Lung",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -108,6 +111,9 @@ export default function Studies(server, filter) {
     numberOfStudyRelatedInstances: 1,
     StudyDescription: 1,
     modalities: "CR",
+    bodypart: "Lung",
+    aiModalities: "CT",
+    aiBodypart: "Brain",
   });
 
   studies.push({
@@ -124,6 +130,9 @@ export default function Studies(server, filter) {
     numberOfStudyRelatedInstances: 1,
     StudyDescription: 1,
     modalities: "CR",
+    bodypart: "Lung",
+    aiModalities: "MRI",
+    aiBodypart: "Knee",
   });
   return studies;
 }

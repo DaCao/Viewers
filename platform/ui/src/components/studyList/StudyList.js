@@ -45,19 +45,19 @@ function StudyList(props) {
       displayText: t('PatientName'),
       fieldName: 'PatientName',
       inputType: 'text',
-      size: 330,
+      size: 160,
     },
     {
       displayText: t('MRN'),
       fieldName: 'PatientID',
       inputType: 'text',
-      size: 378,
+      size: 120,
     },
     {
       displayText: t('AccessionNumber'),
       fieldName: 'AccessionNumber',
       inputType: 'text',
-      size: 180,
+      size: 100,
     },
     {
       displayText: t('StudyDate'),
@@ -66,16 +66,34 @@ function StudyList(props) {
       size: 300,
     },
     {
-      displayText: t('Modality'),
+      displayText: t('StudyDescription'),
+      fieldName: 'StudyDescription',
+      inputType: 'text',
+      size: 80,
+    },
+    {
+      displayText: t('检查类型'),
       fieldName: 'modalities',
       inputType: 'text',
       size: 114,
     },
     {
-      displayText: t('StudyDescription'),
-      fieldName: 'StudyDescription',
+      displayText: t('AI 检查类型'),
+      fieldName: 'aiModalities',
       inputType: 'text',
-      size: 335,
+      size: 80,
+    },
+    {
+      displayText: t('检查部位'),
+      fieldName: 'bodypart',
+      inputType: 'text',
+      size: 80,
+    },
+    {
+      displayText: t('AI 检查部位'),
+      fieldName: 'aiBodypart',
+      inputType: 'text',
+      size: 80,
     },
   ];
 
@@ -188,6 +206,9 @@ function StudyList(props) {
               StudyDescription={study.StudyDescription || ''}
               StudyInstanceUID={study.StudyInstanceUID}
               displaySize={displaySize}
+              aiModalities={study.aiModalities}
+              bodypart={study.bodypart}
+              aiBodypart={study.aiBodypart}
             />
           ))}
       </tbody>
@@ -232,6 +253,9 @@ function TableRow(props) {
     AccessionNumber,
     isHighlighted,
     modalities,
+    aiModalities,
+    bodypart,
+    aiBodypart,
     PatientID,
     PatientName,
     StudyDate,
@@ -258,6 +282,9 @@ function TableRow(props) {
         {modalities || `(${t('Empty')})`}
       </td>
       <td>{StudyDescription}</td>
+      <td>{aiModalities}</td>
+      <td>{bodypart}</td>
+      <td>{aiBodypart}</td>
     </tr>
   );
 
@@ -400,6 +427,9 @@ TableRow.propTypes = {
   StudyDescription: PropTypes.string.isRequired,
   StudyInstanceUID: PropTypes.string.isRequired,
   displaySize: PropTypes.string,
+  aiModalities: PropTypes.string.isRequired,
+  bodypart: PropTypes.string.isRequired,
+  aiBodypart: PropTypes.string.isRequired,
 };
 
 TableRow.defaultProps = {

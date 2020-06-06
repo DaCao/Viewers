@@ -383,6 +383,9 @@ async function getStudyList(
       // studyId: "No Study ID"
       StudyInstanceUID: study.StudyInstanceUID, // "1.3.6.1.4.1.5962.99.1.3814087073.479799962.1489872804257.3.0"
       // StudyTime: "160956.0"
+      aiModalities: study.aiModalities,
+      bodypart: study.bodypart,
+      aiBodypart: study.aiBodypart,
     };
   });
 
@@ -433,7 +436,7 @@ function _sortStudies(studies, field, order) {
   });
 
   // Sort by field
-  sortedStudies.sort(function(a, b) {
+  sortedStudies.sort(function (a, b) {
     let fieldA = a[field];
     let fieldB = b[field];
     if (field === 'StudyDate') {
@@ -538,7 +541,8 @@ async function _fetchStudies(
       });
     }
   });
-
+  console.log('hahaha')
+  console.log(studies)
   return studies;
 }
 
