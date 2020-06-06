@@ -8,14 +8,20 @@ window.config = {
     dicomWeb: [
       {
         name: 'DCM4CHEE',
-        wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+        // wadoUriRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/wado',
+        // qidoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+        // wadoRoot: 'https://server.dcmjs.org/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoUriRoot: 'http://127.0.0.1:8081/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'http://127.0.0.1:8081/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'http://127.0.0.1:8081/dcm4chee-arc/aets/DCM4CHEE/rs',
         qidoSupportsIncludeField: true,
         imageRendering: 'wadors',
         thumbnailRendering: 'wadors',
         enableStudyLazyLoad: true,
         supportsFuzzyMatching: true,
+        requestOptions: {
+          auth: 'pacs:pacs',
+        },
       },
     ],
   },
