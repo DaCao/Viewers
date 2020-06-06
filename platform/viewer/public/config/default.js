@@ -20,6 +20,7 @@ window.config = {
         enableStudyLazyLoad: true,
         supportsFuzzyMatching: true,
         requestOptions: {
+          requestFromBrowser: true,
           auth: 'pacs:pacs',
         },
       },
