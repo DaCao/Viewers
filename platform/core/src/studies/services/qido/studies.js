@@ -150,8 +150,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -169,8 +169,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -188,8 +188,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -226,8 +226,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -245,8 +245,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Lung",
   });
 
   studies.push({
@@ -264,8 +264,8 @@ export default function Studies(server, filter) {
     StudyDescription: 1,
     modalities: "CR",
     bodypart: "Lung",
-    aiModalities: "MRI",
-    aiBodypart: "Knee",
+    aiModalities: "CR",
+    aiBodypart: "Brain",
   });
 
   return studies;

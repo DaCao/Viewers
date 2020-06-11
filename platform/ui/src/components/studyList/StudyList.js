@@ -45,55 +45,55 @@ function StudyList(props) {
       displayText: t('PatientName'),
       fieldName: 'PatientName',
       inputType: 'text',
-      size: 160,
+      size: 120,
     },
     {
       displayText: t('MRN'),
       fieldName: 'PatientID',
       inputType: 'text',
-      size: 120,
+      size: 80,
     },
     {
       displayText: t('AccessionNumber'),
       fieldName: 'AccessionNumber',
       inputType: 'text',
-      size: 100,
+      size: 70,
     },
     {
       displayText: t('StudyDate'),
       fieldName: 'StudyDate',
       inputType: 'date-range',
-      size: 300,
+      size: 160,
     },
     {
       displayText: t('StudyDescription'),
       fieldName: 'StudyDescription',
       inputType: 'text',
-      size: 80,
+      size: 60,
     },
     {
-      displayText: t('检查类型'),
+      displayText: t('Modality'),
       fieldName: 'modalities',
       inputType: 'text',
-      size: 114,
-    },
-    {
-      displayText: t('AI 检查类型'),
-      fieldName: 'aiModalities',
-      inputType: 'text',
       size: 80,
     },
     {
-      displayText: t('检查部位'),
+      displayText: t('Detected Modality'),
+      fieldName: 'aiModalities',
+      inputType: 'text',
+      size: 100,
+    },
+    {
+      displayText: t('Body Part'),
       fieldName: 'bodypart',
       inputType: 'text',
       size: 80,
     },
     {
-      displayText: t('AI 检查部位'),
+      displayText: t('Detected Body Part'),
       fieldName: 'aiBodypart',
       inputType: 'text',
-      size: 80,
+      size: 120,
     },
   ];
 
@@ -278,10 +278,10 @@ function TableRow(props) {
       <td>{PatientID}</td>
       <td>{AccessionNumber}</td>
       <td>{StudyDate}</td>
+      <td>{StudyDescription}</td>
       <td className={classNames({ 'empty-value': !modalities })}>
         {modalities || `(${t('Empty')})`}
       </td>
-      <td>{StudyDescription}</td>
       <td>{aiModalities}</td>
       <td>{bodypart}</td>
       <td>{aiBodypart}</td>
